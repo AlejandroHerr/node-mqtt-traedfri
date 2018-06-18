@@ -1,0 +1,12 @@
+{
+  "name": "mqtt-traedfri",
+  "version": "1.0.0",
+  "description": "MQTT Traedfri",
+  "main": "index.js",
+  "author": "Alejandro Hernandez Cobo <alejandroherr@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
