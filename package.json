@@ -6,19 +6,28 @@
   "author": "Alejandro Hernandez Cobo <alejandroherr@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/node": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
-    "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0",
+    "@babel/preset-typescript": "^7.0.0-beta.51",
+    "@types/node": "^10.3.3",
+    "babel-eslint": "^8.2.3",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-flowtype": "^2.49.3",
-    "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.12.0",
-    "flow-bin": "^0.74.0",
-    "flow-typed": "^2.4.0"
+    "node-env-run": "^3.0.2",
+    "typescript": "^2.9.2"
   },
   "scripts": {
-    "flow": "flow check",
-    "flow:install": "flow-typed install --overwrite || true",
+    "dev": "BABEL_DISABLE_CACHE=1 node-env-run -e \"babel-node --extensions '.ts,.js' src/index.ts\"",
+    "devw": "BABEL_DISABLE_CACHE=1 babel-node --extensions \".ts,.js\" src/index.ts",
+    "type-check": "tsc --noEmit",
     "lint": "eslint --cache --format=node_modules/eslint-formatter-pretty ."
+  },
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-stdout-stream": "^1.1.0",
+    "cli-color": "^1.2.0",
+    "node-tradfri-client": "^1.2.1"
   }
 }

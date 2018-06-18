@@ -1,12 +1,6 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "node": true
-        }
-      }
+    "presets": [
+        "@babel/env",
+        "@babel/typescript"
     ]
-  ]
-}
+  }
